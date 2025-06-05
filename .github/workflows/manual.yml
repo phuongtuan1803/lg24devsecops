@@ -37,7 +37,6 @@ jobs:
             -Dsonar.verbose=true
       - name: Coveralls
         uses: coverallsapp/github-action@v2
-              actions/upload-artifact@v4
         with:
           github-token: ${{ github.token }} 
       - name: Pyre Action
