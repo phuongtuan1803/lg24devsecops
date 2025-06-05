@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '${{ matrix.python-version }}'
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: download-artifact@v4
       - run: pip install -r requirements.txt
       - run: py.test --cov --cov-report=xml owm tests -vv
       - name: Analyze with SonarCloud
